@@ -1,0 +1,200 @@
+/* Style Global */
+
+:root {
+
+    /* Paleta de Colores */
+    --color-body: #1c1d22; 
+    --color-navegation: #1a1a1d;
+    --color-texto: #b0b3c3;
+    --color-texto-hover: #6ebfbf; 
+    --color-texto-nav: #e0e0e0; 
+    --color-texto-nav-hover: #ffffff; 
+    --color-fondo-nav: #2a2a2e; 
+
+    /* Fuentes */
+    --fuente-principal: 'Roboto', sans-serif;
+
+}
+
+body {
+    background-color: var(--color-body);
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+
+    scroll-behavior: smooth;
+}
+
+
+/* Navigation Bar */
+
+.containerNavegation {
+    width: 100%;
+    height: 6rem;
+    position: -webkit-sticky; /* Para navegadores webkit */
+    position: sticky; /* Para navegadores compatibles */
+    top: 0;
+    z-index: 1000;
+}
+
+.containerNavegation__nav {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 5rem;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-navegation);
+    padding-left: 1.5rem;
+}
+
+.containerNavegation__nav-enlace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: bold;
+    background-color: var(--color-fondo-nav);
+    transition: box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+}
+.containerNavegation__nav-enlace:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); /* Añadir sombra con brillo al pasar el mouse */
+    transform: scale(1.1);
+}
+
+.containerNavegation__containerLogo {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 4rem;
+    width: 100%;
+    height: 4rem
+}
+.containerNavegation__containerLogo-logo {
+    width: 3rem;
+    height: 3rem
+}
+
+
+/* Section One */
+.containerSeccionOne {
+    width: 100%;
+    height: 100vh; /* Cada sección ocupa el 100% de la pantalla */
+    scroll-snap-align: start; /* Hace que la sección se alinee al inicio al hacer scroll */
+
+    margin-top: 23rem;
+}
+.containerSeccionOne__titulo {
+    text-align: center;
+    color: var(--color-texto);
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+.containerSeccionOne__titulo:hover {
+    color: var(--color-texto-hover);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.containerSeccionOne__subtitulo {
+    text-align: center;
+    color: var(--color-texto);
+    font-size: 3rem;
+    text-transform: uppercase;
+
+}
+.containerSeccionOne__subtitulo:hover {
+    color: var(--color-texto-hover);
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Section Two */
+.containerAcercaLlamativa {
+    width: 100%;
+    height: 100vh; /* Cada sección ocupa el 100% de la pantalla */
+    scroll-snap-align: start; /* Hace que la sección se alinee al inicio al hacer scroll */
+
+    padding: 5rem 2rem;
+    background-color: var(--color-body);
+    color: var(--color-texto);
+}
+
+.containerAcercaLlamativa__contenido {
+    max-width: 70rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.containerAcercaLlamativa__titulo {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-texto);
+}
+
+.containerAcercaLlamativa__texto {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    
+}
+.containerAcercaLlamativaTecnologia__texto {
+    margin-top: 5rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+
+}
+
+.containerAcercaLlamativa__tecnologias {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tecnologia {
+    background-color: var(--color-fondo-nav);
+    color: var(--color-texto);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    margin: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.tecnologia:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+
+/* FOOTER */
+.containerFooter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    margin-top: 10rem;
+    background-color: var(--color-fondo-nav);
+}
+.containerFooter__copy {
+    font-size: 1.3rem;
+    color: var(--color-texto);
+    
+}
