@@ -9,7 +9,8 @@
     --color-texto-hover: #6ebfbf; 
     --color-texto-nav: #e0e0e0; 
     --color-texto-nav-hover: #ffffff; 
-    --color-fondo-nav: #2a2a2e; 
+    --color-fondo-nav: #1a1a1d; 
+    --color-btn-tecnologias: #40403f;
 
     /* Fuentes */
     --fuente-principal: 'Roboto', sans-serif;
@@ -18,9 +19,10 @@
 
 body {
     background-color: var(--color-body);
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--fuente-principal);
     overflow-x: hidden;
-
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
 
@@ -45,6 +47,63 @@ body {
     height: 100%;
     background-color: var(--color-navegation);
     padding-left: 1.5rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Ocultar el menú en dispositivos móviles por defecto */
+@media (max-width: 568px) {
+    .containerNavegation__nav {
+        display: none; 
+        flex-direction: column;
+        background-color: var(--color-navegation);
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 6rem); 
+        z-index: 999;
+    }
+
+   
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--color-texto-nav);
+        cursor: pointer;
+    }
+
+    /* Ajustes de los enlaces del menú en móviles */
+    .containerNavegation__nav-enlace {
+        width: 100%;
+        height: 4rem;
+        text-align: center;
+        padding: 1rem 0;
+        margin: 0;
+        border-bottom: 1px solid var(--color-texto-hover);
+    }
+
+    /* Estilos para el estado activo del menú */
+    .nav-active {
+        display: flex;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+}
+
+/* Animación para la aparición del menú */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .containerNavegation__nav-enlace {
@@ -58,12 +117,21 @@ body {
     color: var(--color-texto);
     font-weight: bold;
     background-color: var(--color-fondo-nav);
-    transition: box-shadow 0.3s ease;
-    transition: transform 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0);
     margin-left: 1rem;
     border-radius: 0.5rem;
 }
+
+@media (max-width: 568px) {
+    .containerNavegation__nav-enlace {
+        width: 100%;
+        height: 4rem;
+        text-align: center;
+        margin-left: 0;
+    }
+}
+
 .containerNavegation__nav-enlace:hover {
     box-shadow: 0 0 5px rgba(0, 0, 0, 1);
     box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7); /* Añadir sombra con brillo al pasar el mouse */
@@ -76,33 +144,45 @@ body {
     align-items: center;
     margin-right: 4rem;
     width: 100%;
-    height: 4rem
+    height: 4rem;
 }
+
 .containerNavegation__containerLogo-logo {
     width: 3rem;
-    height: 3rem
+    height: 3rem;
 }
 
 
 /* Section One */
 .containerSeccionOne {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 100vh; /* Cada sección ocupa el 100% de la pantalla */
     scroll-snap-align: start; /* Hace que la sección se alinee al inicio al hacer scroll */
-
-    margin-top: 23rem;
 }
+
+@media (max-width: 568px) {
+    .containerSeccionOne {
+        padding: 2rem 1rem;
+    }
+}
+
 .containerSeccionOne__titulo {
     text-align: center;
     color: var(--color-texto);
     font-size: 5rem;
     text-transform: uppercase;
 }
+
 .containerSeccionOne__titulo:hover {
     color: var(--color-texto-hover);
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
+
 .containerSeccionOne__subtitulo {
     text-align: center;
     color: var(--color-texto);
@@ -110,11 +190,13 @@ body {
     text-transform: uppercase;
 
 }
+
 .containerSeccionOne__subtitulo:hover {
     color: var(--color-texto-hover);
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
+
 .video-background {
     position: absolute;
     top: 0;
@@ -125,21 +207,57 @@ body {
     z-index: -1;
 }
 
+.containerSeccionOne__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    font-weight: 700;
+    color: #1a1a1d;
+    background-color: var(--color-texto-hover);
+    border-radius: 0.5rem;
+    width: 10rem;
+    height: 3rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.containerSeccionOne__btn:hover {
+    background-color: #5bd3d3;
+    transform: scale(1.05);
+}
+
 /* Section Two */
 .containerAcercaLlamativa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100vh; /* Cada sección ocupa el 100% de la pantalla */
     scroll-snap-align: start; /* Hace que la sección se alinee al inicio al hacer scroll */
-
     padding: 5rem 2rem;
     background-color: var(--color-body);
     color: var(--color-texto);
 }
-
+@media (max-width: 568px) {
+    .containerAcercaLlamativa {
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+}
 .containerAcercaLlamativa__contenido {
     max-width: 70rem;
     margin: 0 auto;
     text-align: center;
+    
 }
 
 .containerAcercaLlamativa__titulo {
@@ -152,13 +270,12 @@ body {
     font-size: 1.8rem;
     line-height: 1.8;
     margin-bottom: 2rem;
-    
 }
+
 .containerAcercaLlamativaTecnologia__texto {
     margin-top: 5rem;
     font-weight: bold;
     font-size: 1.8rem;
-
 }
 
 .containerAcercaLlamativa__tecnologias {
@@ -168,7 +285,7 @@ body {
 }
 
 .tecnologia {
-    background-color: var(--color-fondo-nav);
+    background-color: var(--color-btn-tecnologias);
     color: var(--color-texto);
     padding: 1rem 2rem;
     border-radius: 10px;
@@ -193,8 +310,8 @@ body {
     margin-top: 10rem;
     background-color: var(--color-fondo-nav);
 }
+
 .containerFooter__copy {
     font-size: 1.3rem;
     color: var(--color-texto);
-    
 }

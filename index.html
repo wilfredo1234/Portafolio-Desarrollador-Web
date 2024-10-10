@@ -17,27 +17,29 @@
 
 <body>
 
-
-
     <header class="containerNavegation">
         <nav class="containerNavegation__nav">
-            <a class="containerNavegation__nav-enlace" href="">Inicio</a>
-            <a class="containerNavegation__nav-enlace" href="">Proyectos</a>
-            <a class="containerNavegation__nav-enlace" href=""></a>
-            <a class="containerNavegation__nav-enlace" href="">Contacto</a>
+            <a class="containerNavegation__nav-enlace" href="#inicio">Inicio</a>
+            <a class="containerNavegation__nav-enlace" href="#proyectos">Proyectos</a>
+            <a class="containerNavegation__nav-enlace" href="#acerca">Contacto</a>
 
             <div class="containerNavegation__containerLogo">
                 <a target="_blank" href="https://github.com/wilfredo1234?tab=repositories">
-                    <img class="containerNavegation__containerLogo-logo" src="img/github.png" alt="">
+                    <img class="containerNavegation__containerLogo-logo" src="img/github.png" alt="Logo Github">
                 </a>
             </div>
         </nav>
+
+        <!-- Botón de menú (Hamburguesa) -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">
+            &#9776; <!-- Ícono de hamburguesa -->
+        </button>
     </header>
 
     <section id="inicio" class="containerSeccionOne">
         <h1 class="containerSeccionOne__titulo">Wilfredo Alarcón</h1>
         <h2 class="containerSeccionOne__subtitulo">Software Developer</h2>
-      
+        <a class="containerSeccionOne__btn" href="#proyectos">Mis Proyectos</a>
     </section>
 
     <section id="acerca" class="containerAcercaLlamativa">
@@ -70,17 +72,9 @@
         </div>
     </section>
 
-   
-    
-    
-
-
-
     <footer class="containerFooter">
         <p class="containerFooter__copy">&copy; Todos los derechos reservados Wilfredo Alarcón</p>
     </footer>
-
-
 
     <script src="JavaScript/index.js"></script>
 </body>
