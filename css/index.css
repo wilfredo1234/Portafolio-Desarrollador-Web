@@ -11,7 +11,9 @@
     --color-texto-nav-hover: #ffffff;
     --color-fondo-nav: #1a1a1d;
     --color-btn-tecnologias: #40403f;
-
+    --color-tarjetas: #2f4848; 
+    
+    
     /* Fuentes */
     --fuente-principal: 'Roboto', sans-serif;
 
@@ -246,6 +248,52 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     transform: translateY(-5px);
 }
+
+/* Seccion 3 */
+/* Section Three - Educación */
+.containerSeccionThree {
+    padding: 2rem;
+    background-color: var(--color-body);
+    color: var(--color-texto);
+}
+
+.containerSeccionThree__titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 8rem;
+
+}
+
+.containerSeccionThree__grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable a diferentes tamaños */
+}
+
+.containerSeccionThree__tarjeta {
+    background-color: var(--color-tarjetas);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.containerSeccionThree__tarjeta:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+.containerSeccionThree__educacion {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.containerSeccionThree__instituto,
+.containerSeccionThree__año {
+    font-size: 1.2rem;
+}
+
+
 
 
 
