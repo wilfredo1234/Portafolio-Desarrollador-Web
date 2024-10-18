@@ -5,13 +5,13 @@
     /* Paleta de Colores */
     --color-body: #1c1d22;
     --color-navegation: #1a1a1d;
+    --color-titulos: #01C38D;
     --color-texto: #b0b3c3;
-    --color-texto-hover: #6ebfbf;
     --color-texto-nav: #e0e0e0;
     --color-texto-nav-hover: #ffffff;
     --color-fondo-nav: #1a1a1d;
-    --color-btn-tecnologias: #40403f;
-    --color-tarjetas: #2f4848; 
+    --color-btn: #01C38D;
+    --color-tarjetas: #3c6464; 
     
     
     /* Fuentes */
@@ -28,18 +28,13 @@ body {
     scroll-behavior: smooth;
 }
 
-
-
-
 /* Navigation Bar */
 
 .containerNavegation {
     width: 100%;
     height: 6rem;
     position: -webkit-sticky;
-    /* Para navegadores webkit */
     position: sticky;
-    /* Para navegadores compatibles */
     top: 0;
     z-index: 1000;
 }
@@ -94,6 +89,8 @@ body {
 }
 
 
+
+
 /* Section One */
 .containerSeccionOne {
     display: flex;
@@ -107,45 +104,46 @@ body {
 
 @media (max-width: 568px) {
     .containerSeccionOne {
-    
+        
     }
 }
 
 .containerSeccionOne__titulo {
     text-align: center;
-    color: var(--color-texto);
+    color: var(--color-titulos);
     font-size: 5rem;
     text-transform: uppercase;
 }
+@media (max-width: 568px) {
+    .containerSeccionOne__titulo {
+       font-size: 3.3rem;
+    }
+}
+
 
 .containerSeccionOne__titulo:hover {
-    color: var(--color-texto-hover);
+    
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
 
 .containerSeccionOne__subtitulo {
     text-align: center;
-    color: var(--color-texto);
+    color: var(--color-titulos);
     font-size: 3rem;
     text-transform: uppercase;
-
 }
+@media (max-width: 568px) {
+    .containerSeccionOne__subtitulo {
+        font-size: 2.3rem;
+    }
+}
+
 
 .containerSeccionOne__subtitulo:hover {
-    color: var(--color-texto-hover);
+    
     transform: scale(1.1);
     transition: transform 0.3s ease;
-}
-
-.video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
 }
 
 .containerSeccionOne__btn {
@@ -153,18 +151,18 @@ body {
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
-    font-weight: 700;
-    color: #1a1a1d;
-    background-color: var(--color-texto-hover);
-    border-radius: 0.5rem;
-    width: 10rem;
-    height: 3rem;
+    font-size: 1.3rem;
+    color: var(--color-texto);
+    border: 0.1rem solid var(--color-btn);
+    border-radius: 0.3rem;
+    width: 18rem;
+    height: 4rem;
     text-decoration: none;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .containerSeccionOne__btn:hover {
-    background-color: #5bd3d3;
+    
     transform: scale(1.05);
 }
 
@@ -172,13 +170,10 @@ body {
 .containerSeccionTwo{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100vh;
     scroll-snap-align: start;
     padding: 5rem 2rem;
-    background-color: var(--color-body);
     color: var(--color-texto);
 }
 
@@ -186,11 +181,8 @@ body {
     .containerSeccionTwo {
         width: 100%;
         height: 100vh;
-        
         text-align: center;
         display: flex;
-        justify-content: center;
-        align-items: center;
         flex-direction: column;
         margin: 0;
         padding: 0;
@@ -205,13 +197,12 @@ body {
 }
 
 .containerSeccionTwo__titulo {
-    font-size: 3.5rem;
-    margin-bottom: 2rem;
-    color: var(--color-texto);
+    font-size: 3rem;
+    margin-bottom: 3.5rem;
+    color: var(--color-titulos);
 }
 
 .containerSeccionTwo__texto {
-   
     margin: 0 auto;
     width: 100%;
     width: 80%;
@@ -219,6 +210,7 @@ body {
     font-size: 1.8rem;
     line-height: 1.8;
     margin-bottom: 2rem;
+    color: var(--color-texto);
     
 }
 
@@ -250,7 +242,6 @@ body {
 }
 
 /* Seccion 3 */
-/* Section Three - Educación */
 .containerSeccionThree {
     padding: 2rem;
     background-color: var(--color-body);
@@ -259,15 +250,24 @@ body {
 
 .containerSeccionThree__titulo {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 8rem;
-
+    font-size: 3rem;
+    margin-bottom: 6rem;
+    color: var(--color-titulos);
 }
 
 .containerSeccionThree__grid {
     display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable a diferentes tamaños */
+    gap: 3rem;
+    grid-template-columns: repeat(2, 300px); /* Tamaño fijo para las columnas en pantallas grandes */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+}
+
+/* Mantiene la misma configuración para pantallas pequeñas */
+@media (max-width: 768px) {
+    .containerSeccionThree__grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable a diferentes tamaños */
+        justify-content: center; /* Centra las tarjetas horizontalmente */
+    }
 }
 
 .containerSeccionThree__tarjeta {
@@ -292,9 +292,6 @@ body {
 .containerSeccionThree__año {
     font-size: 1.2rem;
 }
-
-
-
 
 
 /* FOOTER */
