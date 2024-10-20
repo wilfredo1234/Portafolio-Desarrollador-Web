@@ -11,9 +11,9 @@
     --color-texto-nav-hover: #ffffff;
     --color-fondo-nav: #1a1a1d;
     --color-btn: #01C38D;
-    --color-tarjetas: #3c6464; 
-    
-    
+    --color-tarjetas: #3c6464;
+
+
     /* Fuentes */
     --fuente-principal: 'Roboto', sans-serif;
 
@@ -103,9 +103,7 @@ body {
 }
 
 @media (max-width: 568px) {
-    .containerSeccionOne {
-        
-    }
+    .containerSeccionOne {}
 }
 
 .containerSeccionOne__titulo {
@@ -114,15 +112,16 @@ body {
     font-size: 5rem;
     text-transform: uppercase;
 }
+
 @media (max-width: 568px) {
     .containerSeccionOne__titulo {
-       font-size: 3.3rem;
+        font-size: 3.3rem;
     }
 }
 
 
 .containerSeccionOne__titulo:hover {
-    
+
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
@@ -133,6 +132,7 @@ body {
     font-size: 3rem;
     text-transform: uppercase;
 }
+
 @media (max-width: 568px) {
     .containerSeccionOne__subtitulo {
         font-size: 2.3rem;
@@ -141,7 +141,7 @@ body {
 
 
 .containerSeccionOne__subtitulo:hover {
-    
+
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
@@ -162,16 +162,16 @@ body {
 }
 
 .containerSeccionOne__btn:hover {
-    
+
     transform: scale(1.05);
 }
 
 /* Section Two */
-.containerSeccionTwo{
+.containerSeccionTwo {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    height: 70rem;
     scroll-snap-align: start;
     padding: 5rem 2rem;
     color: var(--color-texto);
@@ -207,39 +207,12 @@ body {
     width: 100%;
     width: 80%;
     text-align: center;
-    font-size: 1.8rem;
+    font-size: 2rem;
     line-height: 1.8;
-    margin-bottom: 2rem;
     color: var(--color-texto);
-    
+
 }
 
-.containerAcercaLlamativaTecnologia__texto {
-    margin-top: 5rem;
-    font-weight: bold;
-    font-size: 1.8rem;
-}
-
-.containerSeccionTwoTitulo__tecnologias {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.tecnologia {
-    background-color: var(--color-btn-tecnologias);
-    color: var(--color-texto);
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    font-size: 1.6rem;
-    margin: 1rem;
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.tecnologia:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
-}
 
 /* Seccion 3 */
 .containerSeccionThree {
@@ -253,20 +226,25 @@ body {
     font-size: 3rem;
     margin-bottom: 6rem;
     color: var(--color-titulos);
+    text-transform: uppercase;
 }
 
 .containerSeccionThree__grid {
     display: grid;
     gap: 3rem;
-    grid-template-columns: repeat(2, 300px); /* Tamaño fijo para las columnas en pantallas grandes */
-    justify-content: center; /* Centra las tarjetas horizontalmente */
+    grid-template-columns: repeat(2, 300px);
+    /* Tamaño fijo para las columnas en pantallas grandes */
+    justify-content: center;
+    /* Centra las tarjetas horizontalmente */
 }
 
 /* Mantiene la misma configuración para pantallas pequeñas */
 @media (max-width: 768px) {
     .containerSeccionThree__grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adaptable a diferentes tamaños */
-        justify-content: center; /* Centra las tarjetas horizontalmente */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        /* Adaptable a diferentes tamaños */
+        justify-content: center;
+        /* Centra las tarjetas horizontalmente */
     }
 }
 
@@ -292,6 +270,8 @@ body {
 .containerSeccionThree__año {
     font-size: 1.2rem;
 }
+
+
 
 
 /* FOOTER */
