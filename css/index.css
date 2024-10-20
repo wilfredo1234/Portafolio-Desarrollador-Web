@@ -12,6 +12,7 @@
     --color-fondo-nav: #1a1a1d;
     --color-btn: #01C38D;
     --color-tarjetas: #3c6464;
+    --color-input: #bababa;
 
 
     /* Fuentes */
@@ -272,7 +273,46 @@ body {
 }
 
 
+/* Seccion 4 */
 
+.contenedorFormulario {
+    width: 100%;
+    height: 50rem;
+    margin-top: 25rem;
+}
+
+.contenedorFormulario__titulo {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--color-titulos);
+}
+
+.contenedorFormulario__contenedorInput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 8rem;
+    gap: 5rem;
+   
+}
+
+.contenedorFormulario__contenedorInput-input {
+    margin: 0 auto;
+    width: 30rem;
+    height: 3.5rem;
+    text-align: center;
+    background-color: var(--color-input);
+    
+}
+
+.contenedorFormulario__contenedorInput-btn {
+    width: 15rem;
+    height: 3rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+}
 
 /* FOOTER */
 .containerFooter {
@@ -281,7 +321,7 @@ body {
     align-items: center;
     width: 100%;
     height: 10rem;
-    margin-top: 10rem;
+    margin-top: 20rem;
     background-color: var(--color-fondo-nav);
 }
 
