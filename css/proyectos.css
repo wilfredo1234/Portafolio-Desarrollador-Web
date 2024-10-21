@@ -1,0 +1,144 @@
+/* Style Global */
+
+:root {
+
+    /* Paleta de Colores */
+    --color-body: #1c1d22;
+    --color-navegation: #1a1a1d;
+    --color-titulos: #01C38D;
+    --color-texto: #b0b3c3;
+    --color-texto-nav: #e0e0e0;
+    --color-texto-nav-hover: #ffffff;
+    --color-fondo-nav: #1a1a1d;
+    --color-btn: #01C38D;
+    --color-tarjetas: #3c6464;
+    --color-input: #bababa;
+
+
+    /* Fuentes */
+    --fuente-principal: 'Roboto', sans-serif;
+
+}
+
+body {
+    background-color: var(--color-body);
+    font-family: var(--fuente-principal);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Bar */
+
+.containerNavegation {
+    width: 100%;
+    height: 6rem;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.containerNavegation__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-navegation);
+    padding-left: 1.5rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Estilos para los enlaces de navegación (pantallas grandes) */
+.containerNavegation__links {
+    display: flex;
+    gap: 2rem;
+    /* Ajustar según prefieras */
+}
+
+.containerNavegation__nav-enlace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: bold;
+    background-color: var(--color-fondo-nav);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    border-radius: 0.5rem;
+}
+
+.containerNavegation__nav-enlace:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+}
+
+/* Estilos del logo de GitHub */
+.containerNavegation__containerLogo {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 4rem;
+    width: 100%;
+    height: 4rem;
+}
+
+.containerNavegation__containerLogo-logo {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Ícono de menú hamburguesa (solo se muestra en pantallas pequeñas) */
+.menu-icon {
+    display: none;
+    /* Oculto en pantallas grandes */
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .containerNavegation__nav {
+        justify-content: space-between;
+    }
+
+    .menu-icon {
+        display: block;
+        /* Mostrar ícono en móviles */
+    }
+
+    .containerNavegation__links {
+        display: none;
+        /* Ocultar menú inicialmente en móviles */
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-navegation);
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .containerNavegation__links.active {
+        display: flex;
+        /* Mostrar menú cuando esté activo */
+    }
+
+    .containerNavegation__nav-enlace {
+        width: 100%;
+        /* Enlaces ocupan todo el ancho en móviles */
+        padding: 1rem 0;
+        font-size: 1.2rem;
+        margin: 0;
+        border-radius: 0;
+    }
+}
