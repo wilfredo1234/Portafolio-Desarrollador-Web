@@ -1,5 +1,4 @@
 /* Style Global */
-
 :root {
 
     /* Paleta de Colores */
@@ -29,6 +28,7 @@ body {
     scroll-behavior: smooth;
 }
 
+
 /* Navigation Bar */
 .containerNavegation {
     width: 100%;
@@ -50,10 +50,9 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Estilos para los enlaces de navegación (pantallas grandes) */
 .containerNavegation__links {
     display: flex;
-    gap: 2rem; /* Ajustar según prefieras */
+    gap: 2rem;
 }
 
 .containerNavegation__nav-enlace {
@@ -76,7 +75,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Estilos del logo de GitHub */
 .containerNavegation__containerLogo {
     display: flex;
     justify-content: end;
@@ -91,9 +89,8 @@ body {
     height: 3rem;
 }
 
-/* Ícono de menú hamburguesa (solo se muestra en pantallas pequeñas) */
 .menu-icon {
-    display: none; /* Oculto en pantallas grandes */
+    display: none;
     cursor: pointer;
 }
 
@@ -102,18 +99,18 @@ body {
     height: 2.7rem;
 }
 
-/* Para pantallas pequeñas (móviles) */
+
 @media (max-width: 768px) {
     .containerNavegation__nav {
         justify-content: space-between;
     }
 
     .menu-icon {
-        display: block; /* Mostrar ícono en móviles */
+        display: block;
     }
 
     .containerNavegation__links {
-        display: none; /* Ocultar menú inicialmente en móviles */
+        display: none;
         position: absolute;
         top: 6rem;
         left: 0;
@@ -124,19 +121,17 @@ body {
     }
 
     .containerNavegation__links.active {
-        display: flex; /* Mostrar menú cuando esté activo */
+        display: flex;
     }
 
     .containerNavegation__nav-enlace {
-        width: 100%; /* Enlaces ocupan todo el ancho en móviles */
+        width: 100%;
         padding: 1rem 0;
         font-size: 1.2rem;
         margin: 0;
         border-radius: 0;
     }
 }
-
-
 
 
 /* Section One */
@@ -162,24 +157,32 @@ body {
     white-space: nowrap;
     overflow: hidden;
 }
+
 .containerSeccionOne__titulo::after {
-    content: '|'; /* Simula el cursor de escritura */
+    content: '|';
     font-weight: normal;
-    animation: blink 0.7s infinite; /* Parpadeo del cursor */
+    animation: blink 0.7s infinite;
 }
+
 @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
 }
+
 @media (max-width: 568px) {
     .containerSeccionOne__titulo {
         font-size: 3.3rem;
     }
 }
 
-
 .containerSeccionOne__titulo:hover {
-
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
@@ -196,7 +199,6 @@ body {
         font-size: 2.3rem;
     }
 }
-
 
 .containerSeccionOne__subtitulo:hover {
 
@@ -224,7 +226,9 @@ body {
     transform: scale(1.05);
 }
 
+
 /* Section Two */
+
 .containerSeccionTwo {
     display: flex;
     flex-direction: column;
@@ -268,7 +272,6 @@ body {
     font-size: 2rem;
     line-height: 1.8;
     color: var(--color-texto);
-
 }
 
 
@@ -291,18 +294,13 @@ body {
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(2, 300px);
-    /* Tamaño fijo para las columnas en pantallas grandes */
     justify-content: center;
-    /* Centra las tarjetas horizontalmente */
 }
 
-/* Mantiene la misma configuración para pantallas pequeñas */
 @media (max-width: 768px) {
     .containerSeccionThree__grid {
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        /* Adaptable a diferentes tamaños */
         justify-content: center;
-        /* Centra las tarjetas horizontalmente */
     }
 }
 
@@ -352,7 +350,7 @@ body {
     margin: 0 auto;
     margin-top: 8rem;
     gap: 5rem;
-   
+
 }
 
 .contenedorFormulario__contenedorInput-input {
@@ -387,4 +385,3 @@ body {
     font-size: 1.3rem;
     color: var(--color-texto);
 }
-
