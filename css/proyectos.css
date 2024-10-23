@@ -142,3 +142,21 @@ body {
         border-radius: 0;
     }
 }
+
+
+/* Seccion titulo */
+
+.contenedorSeccionTitulo {
+    width: 100%;
+    height: 50rem;
+   
+}
+.contenedorSeccionTitulo__titulo {
+    text-align: center;
+    margin-top: 25rem;
+    font-size: 3rem;
+    font-family: var(--fuente-principal);
+    text-transform: uppercase;
+    color: var(--color-titulos);
+    
+}
